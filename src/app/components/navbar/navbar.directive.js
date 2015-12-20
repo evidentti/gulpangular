@@ -5,7 +5,8 @@
     .directive('acmeNavbar', acmeNavbar);
 
     /** @ngInject */
-    function acmeNavbar() {
+    function acmeNavbar($log) {
+        $log.debug('<acmeNavbar> construct');
         var directive = {
             restrict: 'E',
             templateUrl: 'app/components/navbar/navbar.html',
@@ -21,6 +22,7 @@
 
         /** @ngInject */
         function NavbarController(moment) {
+            $log.debug('<acmeNavbar> NavbarController construct');
             var vm = this;
 
             // "vm.creation" is avaible by directive option "bindToController: true"

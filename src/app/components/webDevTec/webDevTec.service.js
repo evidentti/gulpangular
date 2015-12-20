@@ -5,7 +5,8 @@
     .factory('webDevTec', webDevTec);
 
     /** @ngInject */
-    function webDevTec() {
+    function webDevTec($log) {
+        $log.debug('[webDevTec] construct');
         var data = [
             {
                 'title': 'AngularJS',
@@ -65,6 +66,7 @@
 
         return {
             getTec: function() {
+                $log.debug('[webDevTec] getTec');
                 return data;
             }
         }

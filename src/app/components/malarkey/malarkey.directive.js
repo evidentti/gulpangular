@@ -5,7 +5,8 @@
     .directive('acmeMalarkey', acmeMalarkey);
 
     /** @ngInject */
-    function acmeMalarkey(malarkey) {
+    function acmeMalarkey(malarkey, $log) {
+        $log.debug('<acmeMalarkey> construct');
         var directive = {
             restrict: 'E',
             scope: {
@@ -20,6 +21,7 @@
         return directive;
 
         function linkFunc(scope, el, attr, vm) {
+            $log.debug('<acmeMalarkey> linkFunc');
             var watcher;
             var typist = malarkey(el[0], {
                 typeSpeed: 40,
@@ -48,6 +50,7 @@
 
         /** @ngInject */
         function MalarkeyController($log, githubContributor) {
+            $log.debug('<acmeMalarkey> MalarkeyController construct');
             var vm = this;
 
             vm.contributors = [];
@@ -55,13 +58,16 @@
             activate();
 
             function activate() {
+                $log.debug('<acmeMalarkey> MalarkeyController activate');
                 return getContributors().then(function() {
-                    $log.info('Activated Contributors View');
+                    $log.debug('<acmeMalarkey> MalarkeyController getContributors resolved');
                 });
             }
 
             function getContributors() {
+                $log.debug('<acmeMalarkey> MalarkeyController getContributors');
                 return githubContributor.getContributors(10).then(function(data) {
+                    $log.debug('<acmeMalarkey> MalarkeyController githubContributor.getContributors resolved');
                     vm.contributors = data;
 
                     return vm.contributors;
