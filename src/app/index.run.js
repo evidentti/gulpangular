@@ -1,14 +1,13 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('gulpangular')
+    angular.module('gulpangular')
     .run(runBlock);
 
-  /** @ngInject */
-  function runBlock($log) {
+    /** @ngInject */
+    function runBlock($log) {
 
-    $log.debug('runBlock end');
-  }
+        $log.debug('runBlock end');
+    }
 
 })();
