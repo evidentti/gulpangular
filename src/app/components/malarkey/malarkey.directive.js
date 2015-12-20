@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .directive('acmeMalarkey', acmeMalarkey);
+        .directive('acmeMalarkey', acmeMalarkey);
 
     /** @ngInject */
     function acmeMalarkey(malarkey, $log) {
@@ -43,7 +43,7 @@
                 });
             });
 
-            scope.$on('$destroy', function () {
+            scope.$on('$destroy', function() {
                 watcher();
             });
         }

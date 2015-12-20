@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .factory('githubContributor', githubContributor);
+        .factory('githubContributor', githubContributor);
 
     /** @ngInject */
     function githubContributor($log, $http) {
@@ -23,8 +23,8 @@
             }
 
             return $http.get(apiHost + '/contributors?per_page=' + limit)
-            .then(getContributorsComplete)
-            .catch(getContributorsFailed);
+                .then(getContributorsComplete)
+                .catch(getContributorsFailed);
 
             function getContributorsComplete(response) {
                 $log.debug('[githubContributor] getContributors getContributorsComplete');

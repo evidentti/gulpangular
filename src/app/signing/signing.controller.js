@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .controller('SigningController', SigningController);
+        .controller('SigningController', SigningController);
 
     /** @ngInject */
     function SigningController($log) {

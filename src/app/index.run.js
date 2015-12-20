@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .run(runBlock);
+        .run(runBlock);
 
     /** @ngInject */
     function runBlock() {

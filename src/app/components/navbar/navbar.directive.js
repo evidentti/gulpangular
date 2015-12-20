@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .directive('acmeNavbar', acmeNavbar);
+        .directive('acmeNavbar', acmeNavbar);
 
     /** @ngInject */
     function acmeNavbar($log) {

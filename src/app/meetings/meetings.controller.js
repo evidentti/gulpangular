@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .controller('MeetingsController', MeetingsController);
+        .controller('MeetingsController', MeetingsController);
 
     /** @ngInject */
     function MeetingsController($log) {

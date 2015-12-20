@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .config(config);
+        .config(config);
 
     /** @ngInject */
     function config($logProvider, toastrConfig) {

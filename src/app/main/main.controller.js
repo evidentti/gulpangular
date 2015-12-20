@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('gulpangular')
-    .controller('MainController', MainController);
+        .controller('MainController', MainController);
 
     /** @ngInject */
     function MainController($timeout, webDevTec, toastr, $log) {

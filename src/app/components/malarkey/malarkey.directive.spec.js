@@ -2,18 +2,18 @@
     'use strict';
 
     /**
-    * @todo Complete the test
-    * This example is not perfect.
-    * The `link` function is not tested.
-    * (malarkey usage, addClass, $watch, $destroy)
-    */
+     * @todo Complete the test
+     * This example is not perfect.
+     * The `link` function is not tested.
+     * (malarkey usage, addClass, $watch, $destroy)
+     */
     describe('directive malarkey', function() {
         // var $log;
         var vm;
         var el;
 
         beforeEach(module('gulpangular'));
-        beforeEach(inject(function($compile, $rootScope, githubContributor, $q/*, _$log_*/) {
+        beforeEach(inject(function($compile, $rootScope, githubContributor, $q /*, _$log_*/ ) {
             // $log = _$log_;
 
             spyOn(githubContributor, 'getContributors').and.callFake(function() {
