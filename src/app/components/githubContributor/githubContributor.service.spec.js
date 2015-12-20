@@ -5,8 +5,12 @@
         var githubContributor;
         var $httpBackend;
         // var $log;
+        //
+        beforeEach(module('gulpangular', function($provide) {
+            // Output messages
+            $provide.value('$log', console);
+        }));
 
-        beforeEach(module('gulpangular'));
         beforeEach(inject(function(_githubContributor_, _$httpBackend_/*, _$log_*/) {
             githubContributor = _githubContributor_;
             $httpBackend = _$httpBackend_;
