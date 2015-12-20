@@ -25,18 +25,18 @@
         }
 
         function showToastr() {
-            $log.debug('MainController showToastr');
-            toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-            vm.classAnimation = '';
+            // $log.debug('MainController showToastr');
+            // toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
+            // vm.classAnimation = '';
         }
 
         function getWebDevTec() {
-            $log.debug('MainController getWebDevTec');
-            vm.awesomeThings = webDevTec.getTec();
-
-            angular.forEach(vm.awesomeThings, function(awesomeThing) {
-                awesomeThing.rank = Math.random();
-            });
+            // $log.debug('MainController getWebDevTec');
+            // vm.awesomeThings = webDevTec.getTec();
+            //
+            // angular.forEach(vm.awesomeThings, function(awesomeThing) {
+            //     awesomeThing.rank = Math.random();
+            // });
         }
     }
 })();

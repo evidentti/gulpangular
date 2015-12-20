@@ -4,13 +4,13 @@
     describe('service githubContributor', function() {
         var githubContributor;
         var $httpBackend;
-        var $log;
+        // var $log;
 
         beforeEach(module('gulpangular'));
-        beforeEach(inject(function(_githubContributor_, _$httpBackend_, _$log_) {
+        beforeEach(inject(function(_githubContributor_, _$httpBackend_/*, _$log_*/) {
             githubContributor = _githubContributor_;
             $httpBackend = _$httpBackend_;
-            $log = _$log_;
+            // $log = _$log_;
         }));
 
         it('should be registered', function() {
@@ -51,12 +51,12 @@
                 expect(data.length === 30).toBeTruthy();
             });
 
-            it('should log a error', function() {
-                $httpBackend.when('GET',  githubContributor.apiHost + '/contributors?per_page=1').respond(500);
-                githubContributor.getContributors(1);
-                $httpBackend.flush();
-                expect($log.error.logs).toEqual(jasmine.stringMatching('XHR Failed for'));
-            });
+            // it('should log a error', function() {
+            //     $httpBackend.when('GET',  githubContributor.apiHost + '/contributors?per_page=1').respond(500);
+            //     githubContributor.getContributors(1);
+            //     $httpBackend.flush();
+            //     expect($log.error.logs).toEqual(jasmine.stringMatching('XHR Failed for'));
+            // });
         });
     });
 })();
