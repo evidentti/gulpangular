@@ -4,6 +4,11 @@
 
     angular.module('gulpangular')
         .constant('malarkey', malarkey)
-        .constant('moment', moment);
+        .constant('moment', moment)
+        .constant('state', {
+            '/' : 0,
+            '/meetings': 1,
+            '/signing': 2
+        });
 
 })();

@@ -1,12 +1,16 @@
 (function() {
     'use strict';
 
-    describe('controllers', function() {
-        // var vm;
-        //
-        // beforeEach(module('gulpangular'));
-        // beforeEach(inject(function(_$controller_) {
-        //     vm = _$controller_('MainController');
-        // }));
+    describe('MeetingsController', function() {
+        var controller;
+
+        beforeEach(module('gulpangular'));
+        beforeEach(inject(function(_$controller_) {
+            controller = _$controller_('MeetingsController');
+        }));
+
+        it('should have created', function() {
+            expect(controller).not.toEqual(null);
+        });
     });
 })();

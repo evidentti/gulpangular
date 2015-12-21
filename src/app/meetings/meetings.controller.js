@@ -7,5 +7,11 @@
     /** @ngInject */
     function MeetingsController($log) {
         $log.debug('MeetingsController construct');
+
+        activate();
+
+        function activate() {
+            $log.debug('MeetingsController activate');
+        }
     }
 })();

@@ -9,6 +9,7 @@
         "angular": true,
         "module": true,
         "inject": true,
-        "require": true
+        "require": true,
+        "exports": true
     }
 }

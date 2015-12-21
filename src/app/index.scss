@@ -22,6 +22,54 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
         width: 50px;
     }
 }
+[data-ui-view].ng-enter,
+[data-ui-view].ng-leave {
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+[data-ui-view].ng-enter {
+    left: -100%;
+}
+[data-ui-view].ng-enter-active {
+    left: 0;
+}
+[data-ui-view].ng-leave {
+    left: 0;
+}
+[data-ui-view].ng-leave-active {
+    left: 100%;
+}
+.red {
+    background-color: red;
+}
+.root-view {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 50px;
+}
+.main-view {
+    background-color: rgb(106, 211, 235);
+    height: 100%;
+    width: 100%;
+}
+.meetings-view {
+    background-color: rgb(193, 122, 39);
+    height: 100%;
+    width: 100%;
+}
+.signing-view {
+    background-color: rgb(133, 39, 106);
+    height: 100%;
+    width: 100%;
+}
 /**
 *  Do not remove the comments below. It's the markers used by gulp-inject to inject
 *  all your sass files automatically
